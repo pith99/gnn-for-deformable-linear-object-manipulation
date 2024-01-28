@@ -49,8 +49,6 @@ def colorContour(img):
         if keep:
             filtered_contours.append(cnt1)
 
-    print("Number of fitlered contours", len(filtered_contours))
-
     # Draw bounding box around color block
     copied_img = img.copy()
     for contour in filtered_contours:
@@ -61,11 +59,6 @@ def colorContour(img):
         cv2.drawMarker(copied_img, point, color=(0, 0, 255), markerType=cv2.MARKER_CROSS, markerSize=20, thickness=2)
 
     return copied_img
-
-
-
-
-
 
 #Read Video
 cap = cv2.VideoCapture('videos\id3.mp4')
@@ -109,8 +102,6 @@ while True:
 # # Display the image with keypoints
 # cv2.imshow('Keypoints_colorContour', img_with_color_contour_resize)
 
-# if cv2.waitKey(0) & 0xff == 27:
-#     cv2.destroyAllWindows()
 cap.release()
 out.release()
 cv2.destroyAllWindows()
