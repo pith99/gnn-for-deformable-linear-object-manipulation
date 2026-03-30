@@ -15,6 +15,8 @@ The dataset was created using videos of a charging cable marked with 11 red tape
 
 Videos were processed to extract keypoint coordinates for each frame, producing graph-structured temporal data for training and evaluation.
 
+## Problem Formulation
+The task is to predict the future shape of a deformable linear object using its historical shape. The DLO is represented by 11 equidistant keypoints, and the model predicts future `(x, y)` coordinates of these keypoints from previous timesteps.
 
 ## Preprocessing Pipeline
 The raw video data is processed through the following pipeline:
@@ -41,6 +43,8 @@ An A3T-GCN-based architecture is used to model both spatial and temporal depende
 - Edge weights: uniform
 - Frameworks: PyTorch, PyTorch Geometric, OpenCV, NumPy
 
+## Results
+The models were evaluated on their ability to predict future DLO keypoint positions across multiple movement configurations. Experiments included short-horizon prediction and longer-horizon recursive prediction. The Attention Temporal GCN showed stronger capability in capturing spatio-temporal dependencies in DLO motion.
 
 ## Author
 Arpith Koshy
