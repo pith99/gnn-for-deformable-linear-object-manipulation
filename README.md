@@ -40,3 +40,11 @@ An A3T-GCN-based architecture is used to model both spatial and temporal depende
 - Node features: `(x, y)` coordinates
 - Edge weights: uniform
 - Frameworks: PyTorch, PyTorch Geometric, OpenCV, NumPy
+
+
+## Author
+Arpith Koshy
+
+## Acknowledgements
+Supervised by A/P Cheah Chien Chern.
+Special thanks to Zhao Xinge for guidance and support throughout the project.
