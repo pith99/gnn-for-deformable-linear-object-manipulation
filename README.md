@@ -7,7 +7,7 @@ This project investigates the use of Graph Neural Networks (GNNs) to model and p
 - Train GNN-based models to predict future DLO keypoint positions
 - Evaluate the prediction performance of different architectures
 
-  ## Problem Formulation
+## Problem Formulation
 The task is to predict the future shape of a deformable linear object using its historical shape. The DLO is represented by 11 equidistant keypoints, and the model predicts future `(x, y)` coordinates of these keypoints from previous timesteps.
 
 ## Dataset
