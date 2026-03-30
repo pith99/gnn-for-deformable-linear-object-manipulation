@@ -7,6 +7,9 @@ This project investigates the use of Graph Neural Networks (GNNs) to model and p
 - Train GNN-based models to predict future DLO keypoint positions
 - Evaluate the prediction performance of different architectures
 
+  ## Problem Formulation
+The task is to predict the future shape of a deformable linear object using its historical shape. The DLO is represented by 11 equidistant keypoints, and the model predicts future `(x, y)` coordinates of these keypoints from previous timesteps.
+
 ## Dataset
 The dataset was created using videos of a charging cable marked with 11 red tape keypoints. The left end of the cable was fixed, while the right end was moved in a 2D plane. Movements were grouped into three classes:
 - x-axis movement
@@ -14,9 +17,6 @@ The dataset was created using videos of a charging cable marked with 11 red tape
 - diagonal movement
 
 Videos were processed to extract keypoint coordinates for each frame, producing graph-structured temporal data for training and evaluation.
-
-## Problem Formulation
-The task is to predict the future shape of a deformable linear object using its historical shape. The DLO is represented by 11 equidistant keypoints, and the model predicts future `(x, y)` coordinates of these keypoints from previous timesteps.
 
 ## Preprocessing Pipeline
 The raw video data is processed through the following pipeline:
@@ -27,7 +27,6 @@ The raw video data is processed through the following pipeline:
 5. Re-center coordinates using the stationary keypoint as the origin
 6. Apply min-max normalization
 7. Convert sequences into graph-based temporal input-target batches
-
 
 ## Models
 ### 1. GCN-LSTM
